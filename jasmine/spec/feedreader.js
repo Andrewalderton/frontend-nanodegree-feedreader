@@ -38,17 +38,17 @@ $(function() {
     describe('The menu', function() {
     // Test that the menu element is hidden by default.
         it('is hidden by default', function() {
-            var body = document.body.classList.contains('menu-hidden');
-            expect(body).toBeTruthy();
+            var menu = document.body.classList.contains('menu-hidden');
+            expect(menu).toBeTruthy();
         });
         // Test that the menu changes visibility when the menu icon is clicked.
         it('toggles visibility', function() {
             var icon = $('.menu-icon-link');
             var body = document.body;
             icon.click();
-            expect(body.classList.contains('menu-hidden')).toBeFalsy();
+            expect(body.classList.contains('menu-hidden')).toBe(false);
             icon.click();
-            expect(body.classList.contains('menu-hidden')).toBeTruthy();
+            expect(body.classList.contains('menu-hidden')).toBe(true);
         });
     });
 
