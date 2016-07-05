@@ -20,6 +20,8 @@ A number of tests have been written using Jasmine. These check the underlying bu
 ##Usage
 To run the app, you can download the files, or clone the repository, and then open the `index.html` file.
 
+Alternatively, a live version of the project can be found [here](http://andrewalderton.github.io/frontend-nanodegree-feedreader).
+
 Jasmine test results will display at the bottom of the page.
 
 To review the test code for this project, open the `feedreader.js` file located at `jasmine/spec`.
