@@ -36,19 +36,18 @@ $(function() {
 
     // Slide-out menu element tests.
     describe('The menu', function() {
-    // Test that the menu element is hidden by default.
+        // Test that the menu element is hidden by default.
         it('is hidden by default', function() {
-            var menu = document.body.classList.contains('menu-hidden');
-            expect(menu).toBeTruthy();
+            expect(document.body.classList).toContain('menu-hidden');
         });
         // Test that the menu changes visibility when the menu icon is clicked.
         it('toggles visibility', function() {
             var icon = $('.menu-icon-link');
             var body = document.body;
             icon.click();
-            expect(body.classList.contains('menu-hidden')).toBe(false);
+            expect(body.classList).not.toContain('menu-hidden');
             icon.click();
-            expect(body.classList.contains('menu-hidden')).toBe(true);
+            expect(body.classList).toContain('menu-hidden');
         });
     });
 
@@ -59,10 +58,9 @@ $(function() {
                 done();
             });
         });
-        it('has at least one .entry element after loadFeed()', function(done) {
+        it('has at least one .entry element after loadFeed()', function() {
             expect($('.feed').find('.entry')).toBeTruthy();
             expect($('.feed .entry').length).toBeGreaterThan(0);
-            done();
         });
     });
 
@@ -71,14 +69,14 @@ $(function() {
         var header;
         var content;
         beforeEach(function(done) {
-            loadFeed(0, function() {
+            loadFeed(2, function() {
                 header = $('.header-title').html();
                 content = $('.feed').html();
                 done();
             });
         });
         it('content changes when new feed loaded', function(done) {
-            loadFeed(1, function() {
+            loadFeed(3, function() {
                 expect($('.header-title').html()).not.toBe(header);
                 expect($('.feed').html()).not.toBe(content);
                 done();
