@@ -1,10 +1,12 @@
 Feed Reader Testing
 ===================
 
-##Description
+## Description
+
 Udacity Front-end Nanodegree project where Jasmine is used to test the functionality of an app that reads RSS feeds.
 
-##Tests
+## Tests
+
 A number of tests have been written using Jasmine. These check the underlying business logic of the application, as well as the event handling and DOM manipulation. Tests include:
 
 * Looping through each feed in the `allFeeds` object and ensuring it has a **URL defined** and that the **URL is not empty**.
@@ -17,7 +19,8 @@ A number of tests have been written using Jasmine. These check the underlying bu
 
 * Ensuring that when a new feed is loaded by the `loadFeed` function, **the content actually changes**.
 
-##Usage
+## Usage
+
 To run the app, you can download the files, or clone the repository, and then open the `index.html` file.
 
 Alternatively, a live version of the project can be found [here](http://andrewalderton.github.io/frontend-nanodegree-feedreader).
@@ -26,6 +29,7 @@ Jasmine test results will display at the bottom of the page.
 
 To review the test code for this project, open the `feedreader.js` file located at `jasmine/spec`.
 
-##Reference
+## Reference
+
 Jasmine documentation: [Jasmine 2.1](http://jasmine.github.io/2.1/introduction.html).
 
